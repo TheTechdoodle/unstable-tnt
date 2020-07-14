@@ -23,8 +23,8 @@ import java.util.List;
 
 public class UnstableTNT extends JavaPlugin implements Listener
 {
-    private NamespacedKey unstableFlag = new NamespacedKey(this, "unstable");
-    private List<NamespacedKey> addedRecipes = new ArrayList<NamespacedKey>();
+    private final NamespacedKey unstableFlag = new NamespacedKey(this, "unstable");
+    private final List<NamespacedKey> addedRecipes = new ArrayList<>();
     
     @Override
     public void onEnable()
@@ -97,7 +97,7 @@ public class UnstableTNT extends JavaPlugin implements Listener
     }
     
     @EventHandler(priority = EventPriority.MONITOR)
-    public void onBlockPlace(BlockPlaceEvent event)
+    private void onBlockPlace(BlockPlaceEvent event)
     {
         if(event.isCancelled() || event.getBlockPlaced().getType() != Material.TNT)
         {
