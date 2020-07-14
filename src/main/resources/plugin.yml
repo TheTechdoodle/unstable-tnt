@@ -1,0 +1,5 @@
+name: UnstableTNT
+main: com.darkender.plugins.unstabletnt.UnstableTNT
+version: ${project.version}
+author: Techdoodle
+api-version: 1.14
